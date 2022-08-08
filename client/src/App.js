@@ -29,7 +29,6 @@ import Categories from "./dashboard/categories";
 import Orders from "./dashboard/orders";
 import Category_Form from "./dashboard/category-form";
 import Product_Form from "./dashboard/product-form";
-import CardDetails from "./pages/CardDetails";
 
 
 const App = () => {
@@ -50,7 +49,7 @@ const App = () => {
           <Route exact path="/" ><Header /><Home /> <Footer /></Route>
           <Route exact path="/shop" ><Header /><Shop /> <Footer /></Route>
 
-          <Route exact path="/card-details"><Header />  <CardDetails/> <Footer /> </Route>
+          <Route exact path="/single-product"><Header />  <Single_Product/> <Footer /> </Route>
 
           <Route exact path="/login"><Login /></Route>
           <Route path="/register"><Register /></Route>

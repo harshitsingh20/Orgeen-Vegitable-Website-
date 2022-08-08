@@ -37,6 +37,19 @@ export const getProducts = async (req, res) => {
     }
 }
 
+// Show single Product
+
+export const showProduct = async (req, res) => {
+  try{
+      console.log("Show");
+  }
+  catch (error){
+    res.status(200).json({ msg: "Failed found" });
+  }
+}
+
+
+
 //get single category
 export const getSingleProduct = async (req, res) => {
   
