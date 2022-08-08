@@ -2,6 +2,8 @@ import React from 'react';
 import {FaHeart,FaShareAlt,FaShoppingCart,FaEye} from 'react-icons/fa';
 import InnerImageZoom from 'react-inner-image-zoom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import Products from '../../../backend/models/ProductModel';
+
 class Single_Product extends React.Component
 {    
     render()
