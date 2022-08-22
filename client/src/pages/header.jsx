@@ -3,6 +3,11 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { FaTimes, FaSearch, FaUser, FaKey, FaShoppingBag } from 'react-icons/fa';
 import Login from './login';
 import Signup from './signup';
+
+
+export const CartContext = createContext();
+
+
 class Header extends React.Component {
   hideButton = () => {
     document.getElementById('top').style.display = "none";
@@ -14,6 +19,7 @@ class Header extends React.Component {
   render() {
     return (
       <>
+      <CartContext.Provider >
         <style>
           {`
                     .nav-section
@@ -158,6 +164,7 @@ class Header extends React.Component {
           {/* login and Signup form end */}
 
         </header>
+        </CartContext.Provider>
       </>
     )
   }
