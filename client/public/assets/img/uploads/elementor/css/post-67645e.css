@@ -1,0 +1,38 @@
+.elementor-67 .elementor-element.elementor-element-1c6022c.elementor-column > .elementor-column-wrap > .elementor-widget-wrap{justify-content:center;}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-widget-testimonial .aux-testimonial-image{width:113px;}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-testimonial-image img{border-radius:100% 100% 100% 100%;overflow:hidden;}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-testimonial-image{margin-top:0px;margin-bottom:23px;}.elementor-67 .elementor-element.elementor-element-be8baa6 .col-title a, .elementor-67 .elementor-element.elementor-element-be8baa6 .col-title{color:#2A2A2A !important;}.elementor-67 .elementor-element.elementor-element-be8baa6 .col-title, .elementor-67 .elementor-element.elementor-element-be8baa6 .col-title a{font-size:18px;font-weight:bold;text-transform:capitalize;line-height:1.3em;}.elementor-67 .elementor-element.elementor-element-be8baa6 .col-title{margin-top:0px;margin-bottom:4px;}.elementor-67 .elementor-element.elementor-element-be8baa6 .col-subtitle{color:#7A7A7A !important;font-size:15px;font-weight:300;line-height:1.4em;letter-spacing:-0.5px;margin-bottom:10px;}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-testimonial-content{color:#4B4B4B !important;font-size:16px;font-weight:300;line-height:1.5em;}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-testimonial-content .entry-content{margin-top:17px;margin-bottom:76px;}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-rating-box.aux-star-rating::before{color:var( --e-global-color-primary );}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-rating-box.aux-star-rating span::before{color:var( --e-global-color-primary );}.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-widget-testimonial{text-align:center;border-radius:15px 15px 15px 15px;padding:28px 30px 56px 30px;background-color:var( --e-global-color-text );box-shadow:0px 6px 35px 0px rgba(0, 0, 0, 0.07058823529411765);border-style:solid;}.elementor-67 .elementor-element.elementor-element-1954a97 .aux-widget-container{text-align:center;}.elementor-67 .elementor-element.elementor-element-1954a97 > .elementor-widget-container{padding:8px 9px 8px 9px;background-color:transparent;background-image:linear-gradient(180deg, var( --e-global-color-secondary ) 0%, var( --e-global-color-primary ) 100%);border-radius:50px 50px 50px 50px;}.elementor-67 .elementor-element.elementor-element-1954a97{width:auto;max-width:auto;position:absolute;top:75px;left:calc( 50% + 18px );}/* Start custom CSS for aux_testimonial, class: .elementor-element-be8baa6 */.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-testimonial-image img{
+    box-shadow: 0 5px 9px #0000001A!important;
+}
+.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-testimonial-image{
+  margin: auto;
+}
+.elementor-67 .elementor-element.elementor-element-be8baa6 .aux-testimonial-info{
+    position: absolute;
+    bottom: 23px;
+    left: 0;
+    right: 0;
+}/* End custom CSS */
+/* Start custom CSS for column, class: .elementor-element-1c6022c */.elementor-67 .elementor-element.elementor-element-1c6022c .aux-widget-container-inner{
+    z-index: 5;
+    position: relative;
+}
+.elementor-67 .elementor-element.elementor-element-1c6022c .elementor-widget-aux_simple_svg .elementor-widget-container:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(180deg, var( --e-global-color-accent ) 0%, var( --e-global-color-accent ) 100%);
+    transition: all 150ms ease-out;
+    border-radius: 50px;
+    opacity: 0;
+}
+.elementor-67 .elementor-element.elementor-element-1c6022c:hover .elementor-widget-aux_simple_svg .elementor-widget-container:after {
+    opacity: 1;
+    
+}
+.elementor-67 .elementor-element.elementor-element-1c6022c .aux-rating-box.aux-star-rating span::before{
+    transition: all 150ms ease-out;
+}
+.elementor-67 .elementor-element.elementor-element-1c6022c:hover .aux-star-rating span::before{
+  color: var( --e-global-color-accent )!important;
+}/* End custom CSS */
