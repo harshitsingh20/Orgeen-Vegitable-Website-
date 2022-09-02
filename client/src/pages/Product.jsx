@@ -6,14 +6,84 @@ import axios from 'axios';
 
 
 class Product extends React.Component
+
+
 {   
+
+    handelCart =(e)=>{
+        e.preventDefault()
+        let product = {
+            name: this.state.records.name,
+            img: this.state.records.image,
+            price: this.state.records.price,
+            id: this.state.records.id
+        }
+        this.addToCart(product)
+        console.log('HEllo');
+         window.location.reload(false)
+
+    }
+
+    addToCart = (product)=>{
+        const cart = localStorage.getItem('cart') ?
+        JSON.parse(localStorage.getItem('cart')) :
+        [];
+
+    // check if duplicates
+    const duplicates = cart.filter(cartItem => cartItem.id === product.id);
+
+    // if no duplicates, proceed
+    if (duplicates.length === 0) {
+        // prep product data
+        const productToAdd = {
+            ...product,
+            count: 1,
+        };
+
+        // add product data to cart
+        cart.push(productToAdd);
+
+        // add cart to local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+    }else{
+        const count = duplicates[0].count
+        let duplicate = cart.filter(cartItem => cartItem.id !== product.id);
+        const productToAdd = {
+            ...product,
+            count: this.state.clicks,
+        };
+        duplicate.push(productToAdd)
+        localStorage.setItem('cart', JSON.stringify(duplicate));
+
+    }
+}
+
     constructor(props) {
         super(props);
         this.state = {
-            records: []
+            records: [],
+            clicks:1,
+            show:true
         };
         
     }
+
+     IncrementItem = () => {
+         if (this.state.clicks < 10) {
+             this.setState({
+                 clicks: this.state.clicks + 1
+             });
+         }
+     }
+
+     DecreaseItem = () => {
+         if (this.state.clicks > 1) {
+             this.setState({
+                 clicks: this.state.clicks - 1
+             });
+         }
+     }
     
     componentDidMount() {
         const ids = window.location.href.split("/")[4];
@@ -35,9 +105,11 @@ class Product extends React.Component
             console.log("hhssiiiiiiii",records.data.data)
 
         })
- 
+
         
     }
+
+
     
     render()
 
@@ -69,8 +141,11 @@ class Product extends React.Component
                                  <form className='cart pt-3 pb-3'>                                   
                                  <div className="quantity">
                                     <label for="quantity" className='text-light pl-4 pr-lg-4 quant'>Quantity :</label>
-                                    <input type="number" name="quantity" value="1"/>
-                                    <a href="#" className='button-g ml-lg-5 ml-3'><span>ADD TO CART</span></a>
+                                     <input type="button" onClick={this.IncrementItem} value="+" />
+                                    { <span className='cartValue' >{ this.state.clicks }</span> }
+
+                                    <input type="button" onClick={this.DecreaseItem} value="-" />
+                                    <button onClick={this.handelCart} className='button-g ml-lg-5 ml-3'><span>ADD TO CART</span></button>
                                  </div>                                 
                                  </form>
                                  <div className="share-wish d-flex pt-4">

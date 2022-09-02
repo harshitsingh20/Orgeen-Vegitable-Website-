@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-import Header from "./pages/header";
+import Header from "./pages/Header";
 import Footer from "./pages/footer";
 import Home from "./pages/home";
 import Shop from "./pages/shop";
@@ -30,6 +30,8 @@ import Categories from "./dashboard/categories";
 import Orders from "./dashboard/orders";
 import Category_Form from "./dashboard/category-form";
 import Product_Form from "./dashboard/product-form";
+import Check_Out from "./pages/check-out";
+import View_Cart from "./pages/view-cart";
 
 
 const App = () => {
@@ -51,7 +53,8 @@ const App = () => {
           {/* <Route exact path="/single-product/:64"  ><Header />  <Single_Product/> <Footer /> </Route> */}
           <Route exact path="/shop" ><Header /><Shop /> <Footer /></Route>
           <Route exact path="/ProductDetail" ><Header /><ProductDetail /> <Footer /></Route>
-
+          <Route exact path = "/check" > <Header / > <Check_Out / > <Footer / > </Route>
+          <Route exact path = "/view" > <Header / > <View_Cart / > <Footer / > </Route>
           <Route exact path="/login"><Login /></Route>
           <Route path="/register"><Register /></Route>
 
@@ -64,13 +67,14 @@ const App = () => {
           <Route  path="/orders"> <DashHeader/> <Orders/> <DashFooter /> </Route>
           <Route  path="/category-form"> <DashHeader/> <Category_Form/> <DashFooter /> </Route>
           <Route  path="/product-form"> <DashHeader/> <Product_Form/> <DashFooter /> </Route>
+         
           {/* <DashFooter /> */}
 
           {/* Dashboard Stop */}
            
            
          
-
+  <Route path="" element={<Check_Out />} />   
           <Route path="/shop" element={<Shop />} />   
           <Route path="/Product" element={<Product />} /> 
           <Route path="/terms-and-conditions" element={<Terms_And_Conditions />} />   
